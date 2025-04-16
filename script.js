@@ -24,7 +24,7 @@ function generateRecipe() {
   
     container.innerHTML = "<h2>Generating recipe...</h2>";
   
-    const eventSource = new EventSource(`http://localhost:3001/recipeStream?${query.toString()}`);
+    const eventSource = new EventSource(`https://genaippt.onrender.com/recipeStream?${query.toString()}`);
   
     let recipeContent = "";
   
