@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Vegan Recipe Generator</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+  <h1>AI Vegan Recipe Generator</h1>
+  <div class="container">
+    <label>Select Ingredients:</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" value="tomato" /> Tomato</label>
+      <label><input type="checkbox" value="onion" /> Onion</label>
+      <label><input type="checkbox" value="garlic" /> Garlic</label>
+      <label><input type="checkbox" value="spinach" /> Spinach</label>
+      <label><input type="checkbox" value="mushroom" /> Mushroom</label>
+    </div>
+
+    <label>Your Ingredients (comma-separated):</label>
+    <input type="text" id="userIngredients" placeholder="e.g. basil, olive oil" />
+
+    <label>Cuisine:</label>
+    <select id="cuisine">
+      <option value="Italian">Italian</option>
+      <option value="Indian">Indian</option>
+      <option value="Mexican">Mexican</option>
+      <option value="Chinese">Chinese</option>
+    </select>
+
+    <label>Meal Type:</label>
+    <input type="text" id="mealType" placeholder="e.g. lunch, dinner" />
+
+    <label>Cooking Time (in minutes):</label>
+    <input type="number" id="cookingTime" placeholder="e.g. 30" />
+
+    <label>Complexity:</label>
+    <select id="complexity">
+      <option value="Easy">Easy</option>
+      <option value="Medium">Medium</option>
+      <option value="Hard">Hard</option>
+    </select>
+
+    <button onclick="generateRecipe()">Generate Recipe</button>
+
+    <div class="result" id="recipeResult" style="display:none;"></div>
+    <button id="downloadBtn" style="display:none; margin-top: 10px;">Download as PNG</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
