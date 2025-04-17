@@ -11,7 +11,7 @@ const PORT = 3001;
 
 // Load Gemini API key
 const apiKey = process.env.GEMINI_API_KEY;
-const genAI = new GoogleGenerativeAI(apiKey || 'AIzaSyBoNi4cnjN6Gf8JhOmPpegd2a_25xQckiE');
+const genAI = new GoogleGenerativeAI(apiKey || 'AIzaSyA-LEDmzNx5NX2xIEvwCnQ-11QaiLA9Sko');
 
 // Enable CORS
 app.use(cors());
